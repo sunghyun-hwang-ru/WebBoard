@@ -1,0 +1,6 @@
+{
+    "http.proxy": "https://70466504:tjdgus740@obprx01.intra.hitachi.co.jp:8080/",
+    "http.proxyStrictSSL": false,
+    "java.jdt.ls.vmargs": "-Dhttp.proxyHost=obprx01.intra.hitachi.co.jp -Dhttp.proxyPort=8080 -Dhttp.proxyUser=70466504 -Dhttp.proxyPassword=tjdgus740 -Dhttps.proxyHost=obprx01.intra.hitachi.co.jp -Dhttps.proxyPort=8080 -Dhttps.proxyUser=70466504 -Dhttps.proxyPassword=tjdgus740",
+    "http.proxySupport": "on"
+}
