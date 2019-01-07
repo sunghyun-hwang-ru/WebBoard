@@ -1,0 +1,30 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "server",
+                "projectName": "server",
+                "workingDirectory": "d:\\SPA_DEV\\workspace\\WebBoard\\server",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "server",
+                "projectName": "server",
+                "workingDirectory": "d:\\SPA_DEV\\workspace\\WebBoard\\server",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}
