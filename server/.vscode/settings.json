@@ -2,5 +2,6 @@
     "http.proxy": "http://70466504:tjdgus740@obprx01.intra.hitachi.co.jp:8080/",
     "java.configuration.updateBuildConfiguration": "automatic",
     "http.proxyStrictSSL": false,
-    "http.proxySupport": "override"
+    "http.proxySupport": "override",
+    "xmlTools.xmlFormatterImplementation": "classic"
 }

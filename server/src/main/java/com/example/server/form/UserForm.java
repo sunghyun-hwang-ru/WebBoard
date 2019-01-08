@@ -2,6 +2,7 @@ package com.example.server.form;
 
 import java.io.Serializable;
 
+
 public class UserForm implements Serializable {
     private static final long serialVersionUID = 8364832583264042025L;
 
@@ -69,5 +70,15 @@ public class UserForm implements Serializable {
         this.userCd = userCd;
     }
 
+
+    @Override
+    public String toString(){
+        return "UserForm[{"
+         + "userCd:" + userCd 
+         + ", userPass: " + userPass
+         + ", userName: " + userName
+         + ", email: " + email
+         +"}]";
+    }
 
 }

@@ -1,0 +1,23 @@
+<html>
+<header>
+<script type="text/javascript" src="jquery-1.9.0.min.js" ></script>
+<script type="text/javascript">
+  function send(){
+  	$.ajax({
+  		url: '/regist/getUserInfo',
+  		data: $('form').serialize(),
+  		dataType: 'json',
+        type: 'POST',
+  		success: function(data){
+  			console.log('%o',data);
+  		}
+  	});
+  }
+</script>
+</header>
+<body>
+<form method=post>
+<input type="text" name="userCd" value="70466504" >
+<input type="button" onclick="send()" value="OK">
+</form>
+</body>
