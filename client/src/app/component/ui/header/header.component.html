@@ -11,13 +11,13 @@
       <li class="nav-item" routerLinkActive="active"><a href="#" class="nav-link">More</a></li>
     </ul>
     <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
-      <li *ngIf="!currentUser" class="nav-item order-2 order-md-1"><a href="/user/regist" class="nav-link" title="sign-up"><i
+      <li *ngIf="!userService.currentUserValue" class="nav-item order-2 order-md-1"><a href="/user/regist" class="nav-link" title="sign-up"><i
             class="fa fa-user-plus" aria-hidden="true"></i></a></li>
-      <li *ngIf="!currentUser" class="nav-item order-2 order-md-1"><a href="/user/auth" class="nav-link" title="sign-in"><i
+      <li *ngIf="!userService.currentUserValue" class="nav-item order-2 order-md-1"><a href="/user/auth" class="nav-link" title="sign-in"><i
             class="fa fa-sign-in-alt" aria-hidden="true"></i></a></li>
-      <li *ngIf="currentUser" class="nav-item order-2 order-md-1"><a href="/user/regist" class="nav-link" title="edit user info"><i
+      <li *ngIf="userService.currentUserValue" class="nav-item order-2 order-md-1"><a href="/user/edit" class="nav-link" title="edit user info"><i
             class="fa fa-user-edit" aria-hidden="true"></i></a></li>
-      <li *ngIf="currentUser" class="nav-item order-2 order-md-1"><a href="#" (click)="logout()" class="nav-link" title="logout">{{currentUser.userName}}&nbsp;<i
+      <li *ngIf="userService.currentUserValue" class="nav-item order-2 order-md-1"><a href="#" (click)="logout()" class="nav-link" title="logout">{{userService.currentUser}}&nbsp;<i
             class="fa fa-sign-out-alt" aria-hidden="true"></i></a>
       </li>
     </ul>

@@ -7,6 +7,7 @@ import { ForgotComponent } from './component/user/forgot/forgot.component';
 const routes: Routes = [
   {path: 'user/auth', component: AuthComponent},
   {path: 'user/regist', component: RegistComponent},
+  {path: 'user/edit', component: RegistComponent},
   {path: 'user/forgot', component: ForgotComponent}
 ];
 

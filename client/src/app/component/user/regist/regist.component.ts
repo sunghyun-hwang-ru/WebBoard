@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/common/models/user.model';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/common/services/user.service';
 
 @Component({
   selector: 'app-regist',
@@ -6,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./regist.component.scss']
 })
 export class RegistComponent implements OnInit {
-
-  constructor() { }
+  constructor(
+    private router: Router,
+    private userService: UserService
+  ) {}
 
   ngOnInit() {
   }
