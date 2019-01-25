@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
-import { User } from '../../../common/models/user.model';
 import { UserService } from '../../../common/services/user.service';
 import { AlertService } from '../../../common/services/alert.service';
 
@@ -17,6 +16,8 @@ export class AuthComponent implements OnInit {
   loading = false;
   submitted = false;
   returnUrl: string;
+  loginStatus = false;
+  alertMessage: string;
 
   constructor(
       private formBuilder: FormBuilder,
@@ -57,11 +58,22 @@ export class AuthComponent implements OnInit {
           .pipe(first())
           .subscribe(
               data => {
-                  this.router.navigate([this.returnUrl]);
+                  if (data.token === '1') {
+                    this.loginStatus = true;
+                    this.alertMessage = '';
+                    this.router.navigate([this.returnUrl]);
+                  } else {
+                    this.alertMessage = data.loginMsg;
+                    this.loading = false;
+                  }
               },
               error => {
                   this.alertService.error(error);
                   this.loading = false;
               });
+  }
+
+  closeMessage() {
+      this.alertMessage = '';
   }
 }

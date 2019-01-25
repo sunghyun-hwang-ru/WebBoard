@@ -5,6 +5,7 @@ export class User {
     useYn: string;
     email: string;
     token: string;
+    loginMsg: string;
 
     constructor(userCd?: string, userPass?: string, userName?: string, useYn?: string, email?: string) {
       this.userCd = (userCd) ? userCd : '';
@@ -20,5 +21,7 @@ export class User {
         this.userName = '';
         this.useYn = '';
         this.email = '';
+        this.token = '';
+        this.loginMsg = '';
       }
 }
