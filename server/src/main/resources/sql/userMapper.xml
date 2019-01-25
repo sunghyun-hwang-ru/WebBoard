@@ -15,8 +15,9 @@
 
     <select id="login" resultType="java.util.HashMap" parameterType="com.example.server.domain.User">
         SELECT COUNT(1) AS CNT,
-               SUM(CASE WHEN #{user.userPass} = PASS_DECRYPT(USER_CD,USER_PASS) THEN 1 ELSE 0 END as PASS_CNT
+               SUM(CASE WHEN #{userPass} = PASS_DECRYPT(USER_CD,USER_PASS) THEN 1 ELSE 0 END) as PASS_CNT,
+               SUM(CASE WHEN USE_YN = '0' THEN 1 ELSE 0 END) as DEL_CNT
           FROM TBL_USER
-         WHERE USER_CD = #{user.userCd}
+         WHERE USER_CD = #{userCd}
     </select>
 </mapper>   

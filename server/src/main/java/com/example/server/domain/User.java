@@ -26,6 +26,14 @@ public class User{
     @Setter
     private String useYn;
 
+    @Getter
+    @Setter
+    private String token;
+
+    @Getter
+    @Setter
+    private String loginMsg;
+
     @Override
     public String toString(){
         return "User[{"
@@ -34,6 +42,8 @@ public class User{
          + ", userName: " + userName
          + ", email: " + email
          + ", useYn: " + useYn
+         + ", token: " + token
+         + ", loginMsg: " + loginMsg
          +"}]";
     }
 
