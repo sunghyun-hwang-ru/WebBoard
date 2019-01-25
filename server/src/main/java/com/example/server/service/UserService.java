@@ -18,4 +18,9 @@ public class UserService{
     public User getUserInfo(String userCd){
         return userRepository.userInfo(userCd);
     }
+
+    @Transactional(readOnly = true)
+    public User login(User user){
+        return userRepository.login(user);
+    }
 }

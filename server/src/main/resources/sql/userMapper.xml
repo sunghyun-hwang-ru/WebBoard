@@ -12,4 +12,11 @@
           FROM TBL_USER
          WHERE USER_CD = #{userCd}
     </select>
+
+    <select id="login" resultType="java.util.HashMap" parameterType="com.example.server.domain.User">
+        SELECT COUNT(1) AS CNT,
+               SUM(CASE WHEN #{user.userPass} = PASS_DECRYPT(USER_CD,USER_PASS) THEN 1 ELSE 0 END as PASS_CNT
+          FROM TBL_USER
+         WHERE USER_CD = #{user.userCd}
+    </select>
 </mapper>   
